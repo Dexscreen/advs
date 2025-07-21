@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Get in Touch | Financial Advisor Support</title>
+    <meta name="description" content="Contact our team for support with finding a financial advisor, technical assistance, or general inquiries. We're here to help with all your financial planning needs.">
+    <meta name="keywords" content="contact financial advisor, customer support, financial planning help, advisor assistance">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">FinanceAdvisor</a>
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="ai-trading.html">AI Trading</a></li>
+                <li><a href="digital-investments.html">Digital Investments</a></li>
+                <li><a href="onboarding.html">Get Started</a></li>
+                <li><a href="blog.html">Resources</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <a href="onboarding.html" class="cta-button">Find Your Advisor</a>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p>Have questions about finding a financial advisor or our services? We're here to help.</p>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="contact-methods">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone Support</h3>
+                    <p>Speak with our team directly</p>
+                    <a href="tel:+1-800-FINANCE" class="contact-link">1-800-FINANCE</a>
+                    <span class="contact-hours">Mon-Fri: 8AM-8PM EST</span>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email Support</h3>
+                    <p>Send us your questions</p>
+                    <a href="mailto:support@financeadvisor.com" class="contact-link">support@financeadvisor.com</a>
+                    <span class="contact-hours">Response within 24 hours</span>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Live Chat</h3>
+                    <p>Chat with us in real-time</p>
+                    <button class="contact-link" onclick="openChat()">Start Chat</button>
+                    <span class="contact-hours">Available 24/7</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible</p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="contactFirstName">First Name *</label>
+                            <input type="text" id="contactFirstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactLastName">Last Name *</label>
+                            <input type="text" id="contactLastName" name="lastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address *</label>
+                            <input type="email" id="contactEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Phone Number</label>
+                            <input type="tel" id="contactPhone" name="phone">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquiryType">Type of Inquiry</label>
+                        <select id="inquiryType" name="inquiryType" required>
+                            <option value="">Select inquiry type</option>
+                            <option value="find-advisor">Finding a Financial Advisor</option>
+                            <option value="advisor-join">Joining as an Advisor</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="billing">Billing Question</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="media">Media Inquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Please provide details about your inquiry..."></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter" value="yes">
+                            <span class="checkmark"></span>
+                            Subscribe to our newsletter for financial tips and market insights
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Send Message</button>
+
+                    <!-- Hidden form code -->
+                    <input type="hidden" name="form_code" value="5zQ6X2hYLyA">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="contact-faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How quickly can I be matched with a financial advisor?</h3>
+                    <p>Most clients are matched with qualified financial advisors within 24-48 hours of completing our onboarding process.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Is there a cost to use your matching service?</h3>
+                    <p>No, our matching service is completely free for investors. You only pay advisory fees directly to the advisor you choose to work with.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What if I'm not satisfied with my matched advisor?</h3>
+                    <p>We offer unlimited re-matching until you find the right advisor for your needs. Your satisfaction is our priority.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do you work with advisors nationwide?</h3>
+                    <p>Yes, we have a network of certified financial advisors across all 50 states, offering both in-person and virtual consultation options.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How do you verify advisor credentials?</h3>
+                    <p>All advisors in our network undergo rigorous background checks, credential verification, and ongoing compliance monitoring.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I work with multiple advisors?</h3>
+                    <p>Yes, you can interview multiple advisors before making your decision. We encourage speaking with several to find the best fit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Locations -->
+    <section class="office-locations">
+        <div class="container">
+            <h2 class="section-title">Our Offices</h2>
+            
+            <div class="locations-grid">
+                <div class="location-card">
+                    <h3>New York Headquarters</h3>
+                    <div class="location-details">
+                        <p>123 Financial District<br>New York, NY 10004</p>
+                        <p>Phone: (212) 555-0123</p>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <h3>San Francisco Office</h3>
+                    <div class="location-details">
+                        <p>456 Market Street<br>San Francisco, CA 94102</p>
+                        <p>Phone: (415) 555-0456</p>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <h3>Chicago Office</h3>
+                    <div class="location-details">
+                        <p>789 LaSalle Street<br>Chicago, IL 60604</p>
+                        <p>Phone: (312) 555-0789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html">Find Financial Advisor</a></li>
+                        <li><a href="ai-trading.html">AI Trading</a></li>
+                        <li><a href="digital-investments.html">Digital Investments</a></li>
+                        <li><a href="services.html">Investment Management</a></li>
+                        <li><a href="services.html">Retirement Planning</a></li>
+                        <li><a href="services.html">Tax Planning</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>For Advisors</h3>
+                    <ul>
+                        <li><a href="onboarding.html">Join Our Network</a></li>
+                        <li><a href="about.html">Advisor Resources</a></li>
+                        <li><a href="about.html">Technology Platform</a></li>
+                        <li><a href="about.html">Marketing Support</a></li>
+                        <li><a href="about.html">Compliance Tools</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="blog.html">Financial Planning Guide</a></li>
+                        <li><a href="blog.html">Investment Basics</a></li>
+                        <li><a href="blog.html">AI Trading Guide</a></li>
+                        <li><a href="blog.html">Digital Assets</a></li>
+                        <li><a href="blog.html">Market Insights</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">Our Mission</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 FinanceAdvisor. All rights reserved. | Privacy Policy | Terms of Service | Disclosure</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

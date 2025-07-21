@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started | Find Your Financial Advisor | Free Consultation</title>
+    <meta name="description" content="Start your journey to financial success. Get matched with the best financial advisors near you. Free consultation and personalized financial planning.">
+    <meta name="keywords" content="get started financial advisor, free consultation, financial planning, investment advice, retirement planning">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">FinanceAdvisor</a>
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="ai-trading.html">AI Trading</a></li>
+                <li><a href="digital-investments.html">Digital Investments</a></li>
+                <li><a href="onboarding.html" class="active">Get Started</a></li>
+                <li><a href="blog.html">Resources</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="onboarding.html" class="cta-button">Find Your Advisor</a>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Onboarding Hero -->
+    <section class="onboarding-hero">
+        <div class="container">
+            <h1>Choose Your Path to Financial Success</h1>
+            <p>Whether you're an investor seeking expert guidance or a financial advisor looking to grow your practice, we're here to help.</p>
+        </div>
+    </section>
+
+    <!-- Path Selection -->
+    <section class="path-selection">
+        <div class="container">
+            <div class="paths-grid">
+                <!-- Investor Path -->
+                <div class="path-card investor-path">
+                    <div class="path-icon">👤</div>
+                    <h2>I'm an Investor</h2>
+                    <p>Looking for a financial advisor to help with investment planning, retirement, or wealth management</p>
+                    <ul class="path-benefits">
+                        <li>✓ Free advisor matching</li>
+                        <li>✓ Personalized financial planning</li>
+                        <li>✓ AI-powered investment strategies</li>
+                        <li>✓ Digital asset management</li>
+                        <li>✓ Retirement planning</li>
+                    </ul>
+                    <button class="btn-primary" onclick="showInvestorForm()">Find My Advisor</button>
+                </div>
+
+                <!-- Advisor Path -->
+                <div class="path-card advisor-path">
+                    <div class="path-icon">💼</div>
+                    <h2>I'm a Financial Advisor</h2>
+                    <p>Join our network of certified financial advisors and grow your practice with qualified leads</p>
+                    <ul class="path-benefits">
+                        <li>✓ Qualified client leads</li>
+                        <li>✓ Advanced technology platform</li>
+                        <li>✓ Marketing support</li>
+                        <li>✓ Compliance tools</li>
+                        <li>✓ Professional development</li>
+                    </ul>
+                    <button class="btn-secondary" onclick="showAdvisorForm()">Join Our Network</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investor Onboarding Form -->
+    <section class="onboarding-form investor-form" id="investorForm" style="display: none;">
+        <div class="container">
+            <div class="form-header">
+                <h2>Find Your Perfect Financial Advisor</h2>
+                <p>Tell us about your financial goals and we'll match you with the best advisors near you</p>
+            </div>
+            
+            <form class="multi-step-form" id="investorOnboardingForm">
+                <!-- Step 1: Basic Information -->
+                <div class="form-step active" data-step="1">
+                    <h3>Let's start with the basics</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zipCode">ZIP Code *</label>
+                            <input type="text" id="zipCode" name="zipCode" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age Range</label>
+                            <select id="age" name="age">
+                                <option value="">Select age range</option>
+                                <option value="18-30">18-30</option>
+                                <option value="31-45">31-45</option>
+                                <option value="46-60">46-60</option>
+                                <option value="60+">60+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-primary next-step">Next Step</button>
+                </div>
+
+                <!-- Step 2: Financial Goals -->
+                <div class="form-step" data-step="2">
+                    <h3>What are your primary financial goals?</h3>
+                    <div class="goals-grid">
+                        <div class="goal-option">
+                            <input type="checkbox" id="retirement" name="goals" value="retirement">
+                            <label for="retirement">
+                                <div class="goal-icon">🏖️</div>
+                                <span>Retirement Planning</span>
+                            </label>
+                        </div>
+                        <div class="goal-option">
+                            <input type="checkbox" id="investment" name="goals" value="investment">
+                            <label for="investment">
+                                <div class="goal-icon">📈</div>
+                                <span>Investment Management</span>
+                            </label>
+                        </div>
+                        <div class="goal-option">
+                            <input type="checkbox" id="tax" name="goals" value="tax">
+                            <label for="tax">
+                                <div class="goal-icon">💰</div>
+                                <span>Tax Planning</span>
+                            </label>
+                        </div>
+                        <div class="goal-option">
+                            <input type="checkbox" id="estate" name="goals" value="estate">
+                            <label for="estate">
+                                <div class="goal-icon">🏠</div>
+                                <span>Estate Planning</span>
+                            </label>
+                        </div>
+                        <div class="goal-option">
+                            <input type="checkbox" id="ai-trading" name="goals" value="ai-trading">
+                            <label for="ai-trading">
+                                <div class="goal-icon">🤖</div>
+                                <span>AI Trading</span>
+                            </label>
+                        </div>
+                        <div class="goal-option">
+                            <input type="checkbox" id="digital-assets" name="goals" value="digital-assets">
+                            <label for="digital-assets">
+                                <div class="goal-icon">💎</div>
+                                <span>Digital Assets</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-navigation">
+                        <button type="button" class="btn-secondary prev-step">Previous</button>
+                        <button type="button" class="btn-primary next-step">Next Step</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Investment Experience -->
+                <div class="form-step" data-step="3">
+                    <h3>Tell us about your investment experience</h3>
+                    <div class="form-group">
+                        <label for="investmentExperience">Investment Experience Level</label>
+                        <select id="investmentExperience" name="investmentExperience" required>
+                            <option value="">Select your experience level</option>
+                            <option value="beginner">Beginner - New to investing</option>
+                            <option value="intermediate">Intermediate - Some experience</option>
+                            <option value="advanced">Advanced - Experienced investor</option>
+                            <option value="expert">Expert - Professional level</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="portfolioValue">Current Portfolio Value</label>
+                        <select id="portfolioValue" name="portfolioValue">
+                            <option value="">Select portfolio value</option>
+                            <option value="0-50k">$0 - $50,000</option>
+                            <option value="50k-250k">$50,000 - $250,000</option>
+                            <option value="250k-1m">$250,000 - $1,000,000</option>
+                            <option value="1m+">$1,000,000+</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="riskTolerance">Risk Tolerance</label>
+                        <select id="riskTolerance" name="riskTolerance" required>
+                            <option value="">Select risk tolerance</option>
+                            <option value="conservative">Conservative - Preserve capital</option>
+                            <option value="moderate">Moderate - Balanced growth</option>
+                            <option value="aggressive">Aggressive - Maximum growth</option>
+                        </select>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn-secondary prev-step">Previous</button>
+                        <button type="button" class="btn-primary next-step">Next Step</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Additional Information -->
+                <div class="form-step" data-step="4">
+                    <h3>Additional Information</h3>
+                    <div class="form-group">
+                        <label for="timeframe">Investment Timeframe</label>
+                        <select id="timeframe" name="timeframe">
+                            <option value="">Select timeframe</option>
+                            <option value="short">Short-term (1-3 years)</option>
+                            <option value="medium">Medium-term (3-10 years)</option>
+                            <option value="long">Long-term (10+ years)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="advisorPreference">Advisor Preference</label>
+                        <select id="advisorPreference" name="advisorPreference">
+                            <option value="">No preference</option>
+                            <option value="local">Local advisor (in-person meetings)</option>
+                            <option value="virtual">Virtual advisor (online meetings)</option>
+                            <option value="hybrid">Hybrid (both options)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="additionalInfo">Additional Information (Optional)</label>
+                        <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Tell us anything else that would help us match you with the right advisor..."></textarea>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn-secondary prev-step">Previous</button>
+                        <button type="submit" class="btn-primary">Find My Advisor</button>
+                    </div>
+                </div>
+
+                <!-- Hidden form code -->
+                <input type="hidden" name="form_code" value="5zQ6X2hYLyA">
+            </form>
+        </div>
+    </section>
+
+    <!-- Advisor Onboarding Form -->
+    <section class="onboarding-form advisor-form" id="advisorForm" style="display: none;">
+        <div class="container">
+            <div class="form-header">
+                <h2>Join Our Network of Financial Advisors</h2>
+                <p>Connect with qualified investors and grow your practice with our advanced platform</p>
+            </div>
+            
+            <form class="multi-step-form" id="advisorOnboardingForm">
+                <!-- Step 1: Professional Information -->
+                <div class="form-step active" data-step="1">
+                    <h3>Professional Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="advisorFirstName">First Name *</label>
+                            <input type="text" id="advisorFirstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="advisorLastName">Last Name *</label>
+                            <input type="text" id="advisorLastName" name="lastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="advisorEmail">Email Address *</label>
+                            <input type="email" id="advisorEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="advisorPhone">Phone Number *</label>
+                            <input type="tel" id="advisorPhone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="firmName">Firm Name *</label>
+                            <input type="text" id="firmName" name="firmName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="advisorLocation">Location *</label>
+                            <input type="text" id="advisorLocation" name="location" placeholder="City, State" required>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-primary next-step">Next Step</button>
+                </div>
+
+                <!-- Step 2: Credentials & Experience -->
+                <div class="form-step" data-step="2">
+                    <h3>Credentials & Experience</h3>
+                    <div class="form-group">
+                        <label for="yearsExperience">Years of Experience *</label>
+                        <select id="yearsExperience" name="yearsExperience" required>
+                            <option value="">Select experience</option>
+                            <option value="1-3">1-3 years</option>
+                            <option value="4-7">4-7 years</option>
+                            <option value="8-15">8-15 years</option>
+                            <option value="15+">15+ years</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="credentials">Professional Credentials</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="credentials" value="CFP"> CFP (Certified Financial Planner)</label>
+                            <label><input type="checkbox" name="credentials" value="CFA"> CFA (Chartered Financial Analyst)</label>
+                            <label><input type="checkbox" name="credentials" value="ChFC"> ChFC (Chartered Financial Consultant)</label>
+                            <label><input type="checkbox" name="credentials" value="PFS"> PFS (Personal Financial Specialist)</label>
+                            <label><input type="checkbox" name="credentials" value="RIA"> RIA (Registered Investment Advisor)</label>
+                            <label><input type="checkbox" name="credentials" value="Series7"> Series 7</label>
+                            <label><input type="checkbox" name="credentials" value="Series66"> Series 66</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aum">Assets Under Management</label>
+                        <select id="aum" name="aum">
+                            <option value="">Select AUM range</option>
+                            <option value="0-10m">$0 - $10 million</option>
+                            <option value="10m-50m">$10 - $50 million</option>
+                            <option value="50m-100m">$50 - $100 million</option>
+                            <option value="100m+">$100+ million</option>
+                        </select>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn-secondary prev-step">Previous</button>
+                        <button type="button" class="btn-primary next-step">Next Step</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Specializations -->
+                <div class="form-step" data-step="3">
+                    <h3>Areas of Specialization</h3>
+                    <div class="specializations-grid">
+                        <label class="specialization-option">
+                            <input type="checkbox" name="specializations" value="retirement">
+                            <div class="specialization-card">
+                                <div class="specialization-icon">🏖️</div>
+                                <span>Retirement Planning</span>
+                            </div>
+                        </label>
+                        <label class="specialization-option">
+                            <input type="checkbox" name="specializations" value="investment">
+                            <div class="specialization-card">
+                                <div class="specialization-icon">📈</div>
+                                <span>Investment Management</span>
+                            </div>
+                        </label>
+                        <label class="specialization-option">
+                            <input type="checkbox" name="specializations" value="tax">
+                            <div class="specialization-card">
+                                <div class="specialization-icon">💰</div>
+                                <span>Tax Planning</span>
+                            </div>
+                        </label>
+                        <label class="specialization-option">
+                            <input type="checkbox" name="specializations" value="estate">
+                            <div class="specialization-card">
+                                <div class="specialization-icon">🏠</div>
+                                <span>Estate Planning</span>
+                            </div>
+                        </label>
+                        <label class="specialization-option">
+                            <input type="checkbox" name="specializations" value="ai-trading">
+                            <div class="specialization-card">
+                                <div class="specialization-icon">🤖</div>
+                                <span>AI Trading</span>
+                            </div>
+                        </label>
+                        <label class="specialization-option">
+                            <input type="checkbox" name="specializations" value="digital-assets">
+                            <div class="specialization-card">
+                                <div class="specialization-icon">💎</div>
+                                <span>Digital Assets</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn-secondary prev-step">Previous</button>
+                        <button type="submit" class="btn-primary">Join Our Network</button>
+                    </div>
+                </div>
+
+                <!-- Hidden form code -->
+                <input type="hidden" name="form_code" value="5zQ6X2hYLyA">
+                <input type="hidden" name="user_type" value="advisor">
+            </form>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Platform?</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Perfect Matching</h3>
+                    <p>Our AI-powered algorithm ensures you're matched with advisors who specialize in your specific needs and goals.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔒</div>
+                    <h3>Secure & Private</h3>
+                    <p>Your personal information is protected with bank-level security and only shared with pre-screened advisors.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💯</div>
+                    <h3>100% Free</h3>
+                    <p>Our matching service is completely free for investors. No hidden fees or obligations.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Fast Results</h3>
+                    <p>Get matched with qualified financial advisors within 24 hours and schedule your consultation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html">Find Financial Advisor</a></li>
+                        <li><a href="ai-trading.html">AI Trading</a></li>
+                        <li><a href="digital-investments.html">Digital Investments</a></li>
+                        <li><a href="services.html">Investment Management</a></li>
+                        <li><a href="services.html">Retirement Planning</a></li>
+                        <li><a href="services.html">Tax Planning</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>For Advisors</h3>
+                    <ul>
+                        <li><a href="onboarding.html">Join Our Network</a></li>
+                        <li><a href="about.html">Advisor Resources</a></li>
+                        <li><a href="about.html">Technology Platform</a></li>
+                        <li><a href="about.html">Marketing Support</a></li>
+                        <li><a href="about.html">Compliance Tools</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="blog.html">Financial Planning Guide</a></li>
+                        <li><a href="blog.html">Investment Basics</a></li>
+                        <li><a href="blog.html">AI Trading Guide</a></li>
+                        <li><a href="blog.html">Digital Assets</a></li>
+                        <li><a href="blog.html">Market Insights</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">Our Mission</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 FinanceAdvisor. All rights reserved. | Privacy Policy | Terms of Service | Disclosure</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
